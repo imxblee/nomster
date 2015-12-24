@@ -5,7 +5,9 @@ Nomster::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   root 'places#index'
-  resources :places
+  resources :places do 
+    resource :comments,:only => :create
+  end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
