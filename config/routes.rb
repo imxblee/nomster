@@ -7,6 +7,7 @@ Nomster::Application.routes.draw do
   root 'places#index'
   resources :places do 
     resource :comments,:only => :create
+    resource :photos,:only => :create
   end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

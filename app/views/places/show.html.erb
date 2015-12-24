@@ -83,3 +83,13 @@ function initMap() {
     </blockquote>
   </div>
 <% end %>
+
+<div class="booyah-box">
+
+ <%= simple_form_for :photo, :url => place_photos_path(@place) do |f| %>
+      
+        <%= f.input :picture %>
+        <%= f.input :caption %>
+        <%= f.submit "Submit Photo", :class => 'btn btn-primary' %>    
+</div>
+<% end %>
