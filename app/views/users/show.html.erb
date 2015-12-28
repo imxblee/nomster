@@ -14,6 +14,7 @@
 <h1 class="text-center">My Comments</h1>
 <br /><br />
 <% @user.comments.each do |comment | %>
+	      
 	<h2 class="text-center"><%= link_to comment.place.name, place_path(comment.place) %></h2>
     <blockquote>
       <% if comment.humanized_rating.present? %>
@@ -23,6 +24,7 @@
       <small><%= comment.user.email %></small>
     </blockquote>
   </div>
+
 <%end%>
 <div class="clear"></div>
 <br /><br />
